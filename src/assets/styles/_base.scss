@@ -1,0 +1,146 @@
+@import "./bootstrapTheme.scss";
+
+$transitionOption: all 0.2s ease-in-out;
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+
+.layout-wrapper {
+	min-height: 100vh;
+}
+
+body {
+  background-color: $light;
+  color: $dark;
+  transition: $transitionOption;
+}
+
+body .dark {
+	background-color: $dark;
+	color: $light;
+}
+
+// header
+#page-topbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1002;
+	background-color: #fff;
+	box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+	transition: $transitionOption;
+}
+
+.dark #page-topbar {
+	background-color: $dark;
+	box-shadow: 0 0.75rem 1.5rem rgba(126, 129, 133, 0.075);
+}
+
+.navbar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	height: 70px;
+	padding: 0 calc(24px / 2) 0 0;
+}
+
+.navbar-brand-box {
+	padding: 0 1.5rem;
+	text-align: center;
+	width: 250px;
+}
+
+.vertical-menu {
+	width: 250px;
+	z-index: 1001;
+	background: #fff;
+	bottom: 0;
+	margin-top: 0;
+	position: fixed;
+	top: 70px;
+	box-shadow: 0 1rem 2rem rgba(18, 38, 63, 0.03);
+	transition: $transitionOption;
+}
+
+.dark .vertical-menu {
+	background: $dark;
+	box-shadow: 0 1rem 2rem #7e818530;
+}
+
+.vertical-collapsed .vertical-menu {
+	position: absolute;
+	width: 0px !important;
+	z-index: 5;
+}
+
+.vertical-collapsed #sidebar-menu {
+	display: none !important;
+}
+
+.main-content {
+	margin-left: 250px;
+	overflow: hidden;
+}
+
+.vertical-collapsed .main-content {
+	margin-left: 0px !important;
+}
+
+.page-content {
+	padding: calc(70px + 24px) calc(24px / 2) 60px calc(24px / 2);
+}
+
+.footer {
+	bottom: 0;
+	padding: 20px calc(24px / 2);
+	position: absolute;
+	right: 0;
+	color: #74788d;
+	left: 250px;
+	height: 60px;
+  background-color: #f2f2f5;
+	box-shadow: 1rem 1rem 2rem rgba(18, 38, 63, 0.03);
+	transition: $transitionOption;
+}
+
+.dark .footer {
+  background-color: $dark;
+	box-shadow:  1rem 1rem 2.4rem rgba(126, 129, 133, 0.575);
+}
+
+.vertical-collapsed .footer {
+	left: 0px !important;
+}
+
+@media (max-width: 992px) {
+	.navbar-brand-box {
+		width: auto;
+	}
+	.vertical-menu {
+		display: none;
+	}
+	.main-content {
+		margin-left: 0 !important;
+	}
+	.footer {
+		left: 0;
+	}
+}
+
+@media (max-width: 380px) {
+	.navbar-brand-box {
+		display: none;
+	}
+}

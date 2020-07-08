@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+// Font Variable
+$Poppins: "Poppins", sans-sarif;
+
+// Themes
+$theme-colors: (
+	  // "primary": #fff,
+		// "secondary": #14213d,
+		// "light": #ffffff,
+		// "dark": #000000,
+		// "success": #28a745,
+		// "info": #17a2b8,
+		// "warning": #ffc107,
+		// "danger": #dc3545,
+);
+
+// Typography
+$font-family-sans-serif: $Poppins;
+$font-size-base: 0.9rem;
+$line-height-base: 1.5;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
