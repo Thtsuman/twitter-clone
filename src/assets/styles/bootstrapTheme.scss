@@ -5,16 +5,18 @@ $Poppins: "Poppins", sans-sarif;
 
 // Themes
 $theme-colors: (
-	  // "primary": #fff,
-		// "secondary": #14213d,
+	"custom-color": #192734,
+	"primary": #1da1f2,
+	// "secondary": #14213d,
 		// "light": #ffffff,
 		// "dark": #000000,
 		// "success": #28a745,
 		// "info": #17a2b8,
 		// "warning": #ffc107,
-		// "danger": #dc3545,
+		// "danger": #dc3545,,,
 );
 
+$border-radius-lg: 30px;
 // Typography
 $font-family-sans-serif: $Poppins;
 $font-size-base: 0.9rem;

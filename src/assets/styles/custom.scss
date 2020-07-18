@@ -1,0 +1,57 @@
+@import "./bootstrapTheme.scss";
+$primary: #1da1f2;
+
+.sidebar {
+  min-height: 100vh;
+}
+.content {
+  border-left: 1px solid #344048;
+  border-right: 1px solid #344048;
+  min-height: 100vh;
+}
+
+.logo {
+  padding: 10px;
+  border-radius: 30px;
+  color: $light;
+  font-size: 2rem;
+  transition: .2s all ease-in-out;
+}
+
+
+.sidebar-item {
+  width: fit-content;
+  padding: 10px;
+  color: $light;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  transition: .2s all ease-in-out;
+}
+
+.sidebar-item.active {
+  color: $primary;
+}
+
+.user-info {
+  padding: 10px;
+  border-radius: 30px;
+  color: $light;
+  transition: .2s all ease-in-out;
+}
+
+.user-info:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.sidebar-item:hover, .logo:hover {
+  color: $primary;
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.sidebar-item label {
+  font-size: 1rem;
+}
+
+.label-muted {
+  font-size: .8rem;
+}
